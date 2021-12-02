@@ -1,1 +1,82 @@
-﻿
+body{
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    color:black;
+    width: 100%;    
+    min-width: 100%;
+    max-width: 100%;
+    margin: auto;
+}
+
+main section:nth-child(odd){
+    margin-right: 5px;
+
+}
+
+main section:nth-child(even){
+    margin-left: 500px;
+
+}
+
+.sauvetage{
+    float:left;
+    height: 200px;
+    width: 200px;
+    box-shadow: 2px 2px 20px 2px black;
+}
+
+.pdg{
+    float:right;
+    height: 200px;
+    width:300px;
+    box-shadow: 2px 2px 20px 2px black;
+}
+
+.b1{
+    margin-left:250px;
+    margin-top: 5%;
+    padding-right: 50%;
+    display:flex;
+    
+}
+
+
+header{
+    background-image: url(../images/fond.jpg);
+    background-size: 100%;
+    padding:20px 0 20px 0;
+
+}
+
+header h1{
+    text-align: center;
+    font-size: 50px;
+    text-shadow: 2px 2px 2px black;
+}
+
+.btn{
+    margin: 20px 10px 0 10px;
+    float:left;
+    text-decoration: none;
+    color:white;
+    font-size:20px;
+
+    align-items: center;
+}
+
+nav{
+    opacity: 1;
+    display:flex;
+    padding:20px 0px;
+    position: sticky;
+    width:100%;
+    top:0;
+    align-items: center;
+    background-color: #1f1f1f;
+
+}
+
+p{
+    text-align: center;
+    margin: 30px ;
+}
