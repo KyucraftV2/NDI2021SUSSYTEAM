@@ -11,7 +11,7 @@ CREATE TABLE SAUVETAGES(
 
 CREATE TABLE BATEAUX(
     idBateau CHAR(4), nomBateau VARCHAR(50), typeBateau VARCHAR(50),
-    CONSTRAINT pk_bateau PRIMARY KEY (idBateau)
+    CONSTRAINT pk_bateau PRIMARY KEY (idBateau),
     CONSTRAINT nn_nomBateau CHECK (nomBateau is not NULL)
 );
 
