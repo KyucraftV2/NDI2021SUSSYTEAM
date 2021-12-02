@@ -7,24 +7,34 @@
     <title>Formulaire Naufragé</title>
 </head>
 <body>
+    <header>
+        <nav>
+          <a href="page_bateaux.html">Bateaux</a>
+          <a href="page_naufrage.html">Naufragés</a>
+          <a href="page_sauveteur.html">Sauveteurs</a>
+          <a href="formulaire_naufrage.html">Signaler un sauvetage</a>
+          <a href="formulaire.html">Ajouter un sauveteur</a>
+        </nav>
+        <h1>Les Sauveteurs du Dunkerquois</h1>
+      </header>
     <form section="sendToMySecondYearInIut.php" method="get">
         <p>Les informations que vous allez rentrer seront vérifiés par un adminsitateur</p>
         <h2>Informations du Naufragé</h2>
                 
                 <div class="formulaire">
                     <label for="surname">Nom du naufragé</label>
-                    <input id="surname" name="uname" type="text" required="" placeholder="François">
+                    <input id="surname" name="uname" type="text" placeholder="François">
                     <br>
                 </div>
 
                 <div class="formulaire">
                     <label for="name">Prenom du naufragé</label>
-                    <input type="text" name="firstname" id="name" required="required" placeholder="Jean">
+                    <input type="text" name="firstname" id="name" placeholder="Jean">
                 </div>
 
                 <div class="formulaire">
                     <label for="datenaissance">Date de naissance :</label>
-                    <input type="date" name="datenaissance" id="datenaissance" required="">
+                    <input type="date" name="datenaissance" id="datenaissance">
                 </div>
 
                 <div class="buttons">
