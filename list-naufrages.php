@@ -10,10 +10,10 @@
 
 <body>
     <nav>
-    <div><a  class="btn" href="./page_accueil.html">Accueil</a></div>
-    <div><a href="./list-bateaux.php" class="btn">Bateaux</a></div>
-    <div><a href="./list-naufrages.php" class="btn">Naufragés</a></div>  
-    <div><a href="./list-sauveteurs.php" class="btn">Sauveteurs</a></div>
+        <div><a  class="btn" href="./page_accueil.html">Accueil</a></div>
+        <div><a href="./list-bateaux.php" class="btn">Bateaux</a></div>
+        <div><a href="./list-naufrages.php" class="btn">Naufragés</a></div>  
+        <div><a href="./list-sauveteurs.php" class="btn">Sauveteurs</a></div>
     </nav>
     <header>
         <h1>Les Victimes</h1>

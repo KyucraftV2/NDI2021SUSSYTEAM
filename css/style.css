@@ -289,3 +289,15 @@ section.list > div {
     display: flex;
     flex-direction: row;
   }
+
+section > form{
+    align-items: center;
+}
+
+.text_gras {
+    font-weight: bold;
+}
+
+blockquote{
+    font-style: italic;
+}

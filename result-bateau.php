@@ -22,7 +22,7 @@
   <main>
     <!-- BARRE DE RECHERCHE -->
     <section>
-      <form method="post" action="result.php">
+      <form method="post" action="./result-bateau.php">
         <input name="bateau" type="text" size="15" placeholder="Type here… " />
         <!---->
         <div class="buttons">

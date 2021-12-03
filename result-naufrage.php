@@ -22,7 +22,7 @@
   <main>
     <!-- BARRE DE RECHERCHE -->
     <section>
-      <form method="post" action="result.php">
+      <form method="post" action="./result-naufrage.php">
         <input name="naufrage" type="text" size="15" placeholder="Type here… " />
         <!---->
         <div class="buttons">

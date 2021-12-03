@@ -22,7 +22,7 @@
   <main>
     <!-- BARRE DE RECHERCHE -->
     <section>
-      <form method="post" action="result.php">
+      <form method="post" action="./result-sauveteur.php">
         <input name="sauveteur" type="text" size="15" placeholder="Type here… " />
         <!---->
         <div class="buttons">
