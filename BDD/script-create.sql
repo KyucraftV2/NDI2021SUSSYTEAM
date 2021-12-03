@@ -1,5 +1,5 @@
 CREATE TABLE SAUVETEURS(
-   idSauveteur CHAR(5),
+   idSauveteur INT,
    nomSauveteur VARCHAR(30),
    prenomSauveteur VARCHAR(30),
    dateNaissance DATE,
@@ -7,49 +7,43 @@ CREATE TABLE SAUVETEURS(
    fonctionSauveteur VARCHAR(50),
    nbSauvetages INT,
    photoSauveteur TEXT,
-   PRIMARY KEY(idSauveteur)
+   CONSTRAINT pk_Sauveteur PRIMARY KEY(idSauveteur)
 );
 
-CREATE TABLE Sauvetage(
-   codeSauvetage CHAR(7),
+CREATE TABLE SAUVETAGES(
+   codeSauvetage INT,
    lieuSauvetage VARCHAR(50),
    dateSauvetage DATE NOT NULL,
    nbHommesSauvés INT,
    nbSauveteursDécédés INT,
-   idSauveteur CHAR(5) NOT NULL,
-   PRIMARY KEY(codeSauvetage),
-   FOREIGN KEY(idSauveteur) REFERENCES SAUVETEURS(idSauveteur)
+   capitaineSauvetage INT NOT NULL,
+   CONSTRAINT pk_Sauvetages PRIMARY KEY(codeSauvetage)
 );
 
-CREATE TABLE Bateaux(
-   idBateau CHAR(4),
+CREATE TABLE BATEAUX(
+   idBateau INT,
    nomBateau VARCHAR(50) NOT NULL,
    typeBateau VARCHAR(50),
-   PRIMARY KEY(idBateau)
+   CONSTRAINT pk_Bateaux PRIMARY KEY(idBateau)
 );
 
-CREATE TABLE Naufragés(
-   idNaufragé CHAR(5),
+CREATE TABLE NAUFRAGES(
+   idNaufrage INT,
    nomNaufragé VARCHAR(50),
    prenomNaufragé VARCHAR(50),
    dateNaissance DATE,
-   codeSauvetage CHAR(7) NOT NULL,
-   PRIMARY KEY(idNaufragé),
-   FOREIGN KEY(codeSauvetage) REFERENCES Sauvetage(codeSauvetage)
+   codeSauvetage INT NOT NULL,
+   CONSTRAINT pk_Naufrages PRIMARY KEY(idNaufrage)
 );
 
 CREATE TABLE Participer(
-   idSauveteur CHAR(5),
-   codeSauvetage CHAR(7),
-   PRIMARY KEY(idSauveteur, codeSauvetage),
-   FOREIGN KEY(idSauveteur) REFERENCES SAUVETEURS(idSauveteur),
-   FOREIGN KEY(codeSauvetage) REFERENCES Sauvetage(codeSauvetage)
+   idSauveteur INT,
+   codeSauvetage INT,
+   CONSTRAINT pk_Participer PRIMARY KEY(idSauveteur, codeSauvetage)
 );
 
 CREATE TABLE Concerner(
-   codeSauvetage CHAR(7),
-   idBateau CHAR(4),
-   PRIMARY KEY(codeSauvetage, idBateau),
-   FOREIGN KEY(codeSauvetage) REFERENCES Sauvetage(codeSauvetage),
-   FOREIGN KEY(idBateau) REFERENCES Bateaux(idBateau)
+   codeSauvetage INT,
+   idBateau INT,
+   CONSTRAINT pk_Concerner PRIMARY KEY(codeSauvetage, idBateau)
 );
