@@ -10,10 +10,10 @@
 
 <body>
     <nav>
-        <a href="page_accueil.html" class="btn">Accueil</a>
-        <a href="page_bateaux.html" class="btn">Bateaux</a>
-        <a href="page_naufrage.html" class="btn">Naufragés</a>
-        <a href="list-sauveteurs.html" class="btn">Sauveteurs</a>
+        <div><a  class="btn" href="./page_accueil.html">Accueil</a></div>
+        <div><a href="./list-bateaux.php" class="btn">Bateaux</a></div>
+        <div><a href="./list-naufrages.php" class="btn">Naufragés</a></div>  
+        <div><a href="./list-sauveteurs.php" class="btn">Sauveteurs</a></div>
     </nav>
     <header>
         <h1>Les Sauveteurs</h1>
@@ -22,7 +22,7 @@
     <main>
         <!-- BARRE DE RECHERCHE -->
         <section>
-            <form method="post" action="result.php">
+            <form method="post" action="./result-sauveteur.php">
                 <input name="sauveteur" type="text" size="15" placeholder="Type here… " />
                 <!---->
                 <div class="buttons">

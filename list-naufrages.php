@@ -10,19 +10,19 @@
 
 <body>
     <nav>
-        <a href="page_accueil.html" class="btn">Accueil</a>
-        <a href="page_bateaux.html" class="btn">Bateaux</a>
-        <a href="page_naufrage.html" class="btn">Naufragés</a>
-        <a href="list-sauveteurs.html" class="btn">Sauveteurs</a>
+    <div><a  class="btn" href="./page_accueil.html">Accueil</a></div>
+    <div><a href="./list-bateaux.php" class="btn">Bateaux</a></div>
+    <div><a href="./list-naufrages.php" class="btn">Naufragés</a></div>  
+    <div><a href="./list-sauveteurs.php" class="btn">Sauveteurs</a></div>
     </nav>
     <header>
-        <h1>Les Sauveteurs</h1>
+        <h1>Les Victimes</h1>
     </header>
 
     <main>
         <!-- BARRE DE RECHERCHE -->
         <section>
-            <form method="post" action="result.php">
+            <form method="post" action="./result-naufrage.php">
                 <input name="naufrage" type="text" size="15" placeholder="Type here… " />
                 <!---->
                 <div class="buttons">
@@ -32,7 +32,7 @@
         </section>
 
         <section class="list">
-            <h2>Nos Héros</h2>
+            <h2>Les Victimes</h2>
             <?php
             try {
                 $db = new PDO('mysql:host=webinfo.iutmontp.univ-montp2.fr;dbname=reinerk;charset=utf8', 'reinerk', '060078262EG');
