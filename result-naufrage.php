@@ -14,6 +14,8 @@
     <a href="page_bateaux.html" class="btn">Bateaux</a>
     <a href="page_naufrage.html" class="btn">Naufragés</a>
     <a href="list-sauveteurs.html" class="btn">Sauveteurs</a>
+    <button id="themesombre" class="btn">Mode sombre</button>
+    <script src="script.js"></script>
   </nav>
   <header>
     <h1>Les Sauveteurs</h1>

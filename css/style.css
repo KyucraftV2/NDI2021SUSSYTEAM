@@ -301,3 +301,19 @@ section > form{
 blockquote{
     font-style: italic;
 }
+
+#themesombre {
+    right: 0px;
+}
+
+.dark {
+    background-color: black;
+    color:white;
+}
+
+.dark > nav {
+    background-color: #1f1f1f;
+}
+.dark .btn {
+    color: white;
+}
