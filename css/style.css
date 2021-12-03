@@ -270,10 +270,3 @@ ul{
 .decalage{
     margin-left: 50px;
 }
-
-/* LIST SAUVETEURS */
-
-section.list > div {
-    display: flex;
-    flex-direction: row;
-  }
