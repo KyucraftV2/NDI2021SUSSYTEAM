@@ -39,7 +39,6 @@
         $tab = $db->prepare('SELECT * FROM NAUFRAGES');
         $tab->execute();
         $nbID = $tab->fetchAll();
-        echo '<p>'.$nbID[0].'</p>';
         $req = $db->prepare('INSERT INTO NAUFRAGES (idNaufrage) VALUES (:whatID)');
         $values = array(
           "whatID" => sizeof($nbID)+1
