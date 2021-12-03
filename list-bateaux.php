@@ -36,7 +36,7 @@
             <?php
             try {
                 $db = new PDO('mysql:host=webinfo.iutmontp.univ-montp2.fr;dbname=reinerk;charset=utf8', 'reinerk', '060078262EG');
-                $req = $db->prepare('SELECT * FROM SAUVETEURS ORDER BY nomSauveteur');
+                $req = $db->prepare('SELECT * FROM BATEAUX ORDER BY nomBateau');
                 $req->execute();
                 $tuples = $req->fetchAll();
             } catch (Exception $e) {
@@ -48,8 +48,8 @@
                 if ($nb_to_screen >= 5) $nb_to_screen = 5;
                 for ($i = 0; $i < $nb_to_screen; $i++) {
                     $t = $tuples[($li * 5) + $i];
-                    echo '<div class="display-data"> <p>' . $t['nomSauveteur'] . ' ' . $t['prenomSauveteur'];
-                    echo '    <a href="getUser.php?idSauveteur=' . $t['idSauveteur'] . '">Detail</a>   </p></div>';
+                    echo '<div class="display-data"> <p>' . $t['nomBateau'] . ' - (' . $t['typeBateau'] . ')';
+                    echo '    <a href="getUser.php?idBateau=' . $t['idBateau'] . '">Detail</a>   </p></div>';
                 }
                 echo '</div>';
             }
