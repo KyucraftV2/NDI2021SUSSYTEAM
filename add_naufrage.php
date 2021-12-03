@@ -22,7 +22,7 @@
   <main>
     <!-- BARRE DE RECHERCHE -->
     <section>
-      <form method="post" action="./result-sauveteur.php">
+      <form method="post" action="result.php">
         <input name="sauveteur" type="text" size="15" placeholder="Type here… " />
         <!---->
         <div class="buttons">
@@ -32,31 +32,45 @@
     </section>
 
     <section class="list">
-      <h2>Résultats de la Recherche</h2>
+      <h2>Ajout dans la base de données</h2>
       <?php
       try {
         $db = new PDO('mysql:host=webinfo.iutmontp.univ-montp2.fr;dbname=reinerk;charset=utf8', 'reinerk', '060078262EG');
-        $req = $db->prepare('SELECT * FROM SAUVETEURS WHERE nomSauveteur = :save_lname OR prenomSauveteur = :save_fname ORDER BY nomSauveteur');
+        $tab = $db->prepare('SELECT * FROM NAUFRAGES');
+        $tab->execute();
+        $nbID = $tab->fetchAll();
+        $req = $db->prepare('INSERT INTO NAUFRAGES (idNaufrage) VALUES (:whatID)');
         $values = array(
-          "save_lname" => $_POST["sauveteur"],
-          "save_fname" => $_POST["sauveteur"]
+          "whatID" => sizeof($nbID)+1
         );
         $req->execute($values);
         $tuples = $req->fetchAll();
+        if (isset($_POST['uname'])) {
+          $req = $db->prepare('UPDATE NAUFRAGES SET nomNaufrage = :lname_naufrage WHERE idNaufrage = :whatID');
+          $values = array(
+          "lname_naufrage" => $_POST['uname'],
+          "whatID" => sizeof($nbID)+1
+        );
+          $req->execute($values);
+        }
+        if (isset($_POST['firstname'])) {
+          $req = $db->prepare('UPDATE NAUFRAGES SET prenomNaufrage = :fname_naufrage WHERE idNaufrage = :whatID');
+          $values = array(
+          "fname_naufrage" => $_POST['uname'],
+          "whatID" => sizeof($nbID)+1
+        );
+          $req->execute($values);
+        }
+        if (isset($_POST['datenaissance'])) {
+          $req = $db->prepare('UPDATE NAUFRAGES SET dateNaissance = :fname_naufrage WHERE idNaufrage = :whatID');
+          $values = array(
+          "fname_naufrage" => $_POST['uname'],
+          "whatID" => sizeof($nbID)+1
+        );
+          $req->execute($values);
+        }
       } catch (Exception $e) {
         die('Erreur :' . $e->getMessage());
-      }
-      for ($li = 0; $li < (int) sizeof($tuples) / 5; $li++) {
-        echo '<div>';
-        $nb_to_screen = (sizeof($tuples) - ($li * 5));
-        if ($nb_to_screen >= 5) $nb_to_screen = 5;
-        for ($i = 0; $i < $nb_to_screen; $i++) {
-          $t = $tuples[($li * 5) + $i];
-          echo '<div class="display-data"> <p>Nom: ' . $t['nomSauveteur'] . ' ' . $t['prenomSauveteur'];
-          echo $t['dateNaissance'].' - '.$t['dateDeces'];
-          echo 'Fonction: '.$t['fonctionSauveteur'].'</p></div>';
-        }
-        echo '</div>';
       }
       ?>
     </section>
