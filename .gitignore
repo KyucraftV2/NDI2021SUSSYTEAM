@@ -1,4 +1,7 @@
 testPHP.php
 testCSS.css
-BDD\
 footer.html
+./BDD/NuitInfo.db
+./BDD/NuitInfo.sql
+./BDD/Readme
+./BDD/script-create.sql
