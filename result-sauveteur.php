@@ -52,8 +52,9 @@
         if ($nb_to_screen >= 5) $nb_to_screen = 5;
         for ($i = 0; $i < $nb_to_screen; $i++) {
           $t = $tuples[($li * 5) + $i];
-          echo '<div class="display-data"> <p>' . $t['nomSauveteur'] . ' ' . $t['prenomSauveteur'];
-          echo '    <a href="getUser.php?idSauveteur=' . $t['idSauveteur'] . '">Detail</a>   </p></div>';
+          echo '<div class="display-data"> <p>Nom: ' . $t['nomSauveteur'] . ' ' . $t['prenomSauveteur'];
+          echo $t['dateNaissance'].' - '.$t['dateDeces'];
+          echo 'Fonction: '.$t['fonctionSauveteur'].'</p></div>';
         }
         echo '</div>';
       }
