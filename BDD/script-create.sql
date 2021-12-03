@@ -17,7 +17,8 @@ CREATE TABLE SAUVETAGES(
    nbHommesSauvés INT,
    nbSauveteursDécédés INT,
    capitaineSauvetage INT NOT NULL,
-   CONSTRAINT pk_Sauvetages PRIMARY KEY(codeSauvetage)
+   CONSTRAINT pk_Sauvetages PRIMARY KEY(codeSauvetage),
+   CONSTRAINT fk_idCapiSauvetage FOREIGN KEY (capitaineSauvetage) REFERENCES SAUVETEURS(idSauveteur)
 );
 
 CREATE TABLE BATEAUX(
@@ -39,11 +40,15 @@ CREATE TABLE NAUFRAGES(
 CREATE TABLE Participer(
    idSauveteur INT,
    codeSauvetage INT,
-   CONSTRAINT pk_Participer PRIMARY KEY(idSauveteur, codeSauvetage)
+   CONSTRAINT pk_Participer PRIMARY KEY(idSauveteur, codeSauvetage),
+   CONSTRAINT fk_idSauveteur FOREIGN KEY (idSauveteur) REFERENCES SAUVETEURS(idSauveteur),
+   CONSTRAINT fk_codeSauvetage FOREIGN KEY (codeSauvetage) REFERENCES SAUVETAGES(codeSauvetage)
 );
 
 CREATE TABLE Concerner(
    codeSauvetage INT,
    idBateau INT,
-   CONSTRAINT pk_Concerner PRIMARY KEY(codeSauvetage, idBateau)
+   CONSTRAINT pk_Concerner PRIMARY KEY(codeSauvetage, idBateau),
+   CONSTRAINT fk_codeSauvetage_Concerner FOREIGN KEY (codeSauvetage) REFERENCES SAUVETAGES(codeSauvetage),
+   CONSTRAINT fk_idBateau FOREIGN KEY (idBateau) REFERENCES BATEAUX(idBateau)
 );
