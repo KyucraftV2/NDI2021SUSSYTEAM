@@ -22,24 +22,15 @@
     <main>
         <!-- BARRE DE RECHERCHE -->
         <section>
-        <form method= "post" action="result.php">
-                    <input name= "sauveteur" type= "text" size= "15" placeholder= "Type here… " /><!---->
-                    <div class="buttons">
-                        <button class="envoyer" type="submit">Rechercher</button>
-                    </div>
-                </form>
+            <form method="post" action="result.php">
+                <input name="sauveteur" type="text" size="15" placeholder="Type here… " />
+                <!---->
+                <div class="buttons">
+                    <button class="envoyer" type="submit">Rechercher</button>
+                </div>
+            </form>
         </section>
 
-        <!-- COURT APERCU DU TABLEAU D'HONNEUR -->
-        <section class="list">
-            <h2>Tableau d'honneur</h2>
-            <div>
-                <!-- SCRIPT POUR AFFICHER 5 sauveteurs du tableau d'honneur -->
-                <a href="tableau_honneur.html">Voir Plus</a>
-            </div>
-        </section>
-
-        <!-- LISTE PAR ORDRE ALPHABETIQUE DE TOUS LES SAUVETEURS ENREGISTRES (SI PAS DE NOM SELON L'ORDRE DES CODES A LA FIN) -->
         <section class="list">
             <h2>Nos Héros</h2>
             <?php
@@ -56,7 +47,7 @@
                 $nb_to_screen = (sizeof($tuples) - ($li * 5));
                 if ($nb_to_screen >= 5) $nb_to_screen = 5;
                 for ($i = 0; $i < $nb_to_screen; $i++) {
-                    $t = $tuples[($li*5)+$i];
+                    $t = $tuples[($li * 5) + $i];
                     echo '<div class="sauv"> <p>' . $t['nomSauveteur'] . ' ' . $t['prenomSauveteur'];
                     echo '    <a href="getUser.php?idSauveteur=' . $t['idSauveteur'] . '">Detail</a>   </p></div>';
                 }
