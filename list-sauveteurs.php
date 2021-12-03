@@ -42,9 +42,12 @@
 
         <!-- BARRE DE RECHERCHE -->
         <section>
-            <div>
-                <!--Barre de recherche avec options - filtres -->
-            </div>
+        <form id= "searchbox" method= "post" action="formulaire.php">
+                    <input name= "unnaufrage" type= "text" size= "15" placeholder= "Type here… " /><!---->
+                    <div class="buttons">
+                        <button class="envoyer" type="submit">Envoyer</button>
+                    </div>
+                </form>
         </section>
 
         <!-- COURT APERCU DU TABLEAU D'HONNEUR -->
