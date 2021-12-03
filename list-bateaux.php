@@ -23,7 +23,7 @@
         <!-- BARRE DE RECHERCHE -->
         <section>
             <form method="post" action="result.php">
-                <input name="sauveteur" type="text" size="15" placeholder="Type here… " />
+                <input name="bateau" type="text" size="15" placeholder="Type here… " />
                 <!---->
                 <div class="buttons">
                     <button class="envoyer" type="submit">Rechercher</button>
