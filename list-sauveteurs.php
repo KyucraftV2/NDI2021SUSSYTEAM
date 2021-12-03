@@ -42,7 +42,7 @@
 
         <!-- BARRE DE RECHERCHE -->
         <section>
-        <form id= "searchbox" method= "post" action="formulaire.php">
+        <form method= "post" action="formulaire.php">
                     <input name= "unnaufrage" type= "text" size= "15" placeholder= "Type here… " /><!---->
                     <div class="buttons">
                         <button class="envoyer" type="submit">Envoyer</button>
