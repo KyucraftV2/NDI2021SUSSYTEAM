@@ -9,15 +9,29 @@
     <body>
         <nav>
             <div><a href="page_bateaux.html" class="btn">Bateaux</a>
-                <form id= "searchbox" method= "post" action= "">
-                    <input name= "q" type= "text" size= "15" placeholder= "Type here… " /><!---->
+                <form id= "searchbox" method= "post" action="formulaire.php">
+                    <input name= "unbateau" type= "text" size= "15" placeholder= "Type here… " /><!---->
                     <div class="buttons">
                         <button class="envoyer" type="submit">Envoyer</button>
                     </div>
                 </form>  
             </div>
-            <a href="page_naufrage.html" class="btn">Naufragés</a>  
-            <a href="page_sauveteur.html" class="btn">Sauveteurs</a>
+            <div><a href="page_naufrage.html" class="btn">Naufragés</a>
+                <form id= "searchbox" method= "post" action="formulaire.php">
+                    <input name= "unnaufrage" type= "text" size= "15" placeholder= "Type here… " /><!---->
+                    <div class="buttons">
+                        <button class="envoyer" type="submit">Envoyer</button>
+                    </div>
+                </form> 
+            </div>  
+            <div><a href="page_sauveteur.html" class="btn">Sauveteurs</a>
+                <form id= "searchbox" method= "post" action="formulaire.php">
+                    <input name= "unsauveteur" type= "text" size= "15" placeholder= "Type here… " /><!---->
+                    <div class="buttons">
+                        <button class="envoyer" type="submit">Envoyer</button>
+                    </div>
+                </form> 
+            </div>
         </nav>
         <header>
             <h1>Les Sauveteurs du Dunkerquois</h1>
