@@ -8,9 +8,16 @@
     </head>
     <body>
         <nav>
-            <a href="page_bateaux.html" class="btn">Bateaux</a>  
+            <div><a href="page_bateaux.html" class="btn">Bateaux</a>
+                <form id= "searchbox" method= "post" action= "">
+                    <input name= "q" type= "text" size= "15" placeholder= "Type here… " /><!---->
+                    <div class="buttons">
+                        <button class="envoyer" type="submit">Envoyer</button>
+                    </div>
+                </form>  
+            </div>
             <a href="page_naufrage.html" class="btn">Naufragés</a>  
-            <a href="list-sauveteurs.html" class="btn">Sauveteurs</a>     
+            <a href="page_sauveteur.html" class="btn">Sauveteurs</a>
         </nav>
         <header>
             <h1>Les Sauveteurs du Dunkerquois</h1>
@@ -39,7 +46,7 @@
                <figure>
                     <img src="./images/PDG_SNSM.png" class="pdg" alt="PDG_SNSM">
                     <figcaption>
-                        <blockquote>
+                        <blockquote class="b2">
                             "En 2018, la SNSM de Dunkerque a réalisé une vingtaine de sauvetages. Là, rien qu'au mois de septembre, on est à 46
                             missions de sauvetage", explique Alain Ledaguenel, le président de la Société nationale de sauvetage en mer de Dunkerque.
                         </blockquote>
@@ -76,8 +83,32 @@
 
             </section>
         </main>
-        <footer>
-            <!--Lien vers réseaux sociaux-->
-        </footer>
+
+
+    <footer class="footer">
+        <div>
+            <div class="alignement">
+                <div class="colonne">
+                    <h3><a>Rajoutez vos infos !</a></h3>
+                    <ul>
+                        <li><a>Naufragés</a></li>
+                        <li><a>Sauveteur</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="alignement">
+                <h3 class="decalage"><a href="./sources.html">Livre d'Or</a></h3>
+            </div>
+        </div>
+            <div class="divlogo">
+                <a href="https://www.facebook.com/groups/938396409644949"><img src="./images/facebook.png" alt="" class=logo></a>
+                <a href="https://twitter.com/boutelierphili1"><img src="./images/twitter.png" alt="" class="logo"></a>
+                <a href="mailto:sauveteurdudunkerquois@gmail.com"><img src="./images/arobase.png" alt="" class="logo"></a>
+            </div>
+            
+        
+        <p class="copyright">SussyTeam © 2021</p>
+    </footer>
+
     </body>
 </html>
