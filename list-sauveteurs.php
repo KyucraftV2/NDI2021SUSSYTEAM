@@ -57,7 +57,7 @@
         </section>
 
         <!-- LISTE PAR ORDRE ALPHABETIQUE DE TOUS LES SAUVETEURS ENREGISTRES (SI PAS DE NOM SELON L'ORDRE DES CODES A LA FIN) -->
-        <section>
+        <section class="list">
             <h2>Nos Héros</h2>
             <?php
             try {
