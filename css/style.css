@@ -88,8 +88,11 @@ nav{
     top:0;
     align-items: center;
     background-color: #1f1f1f;
+    align-items: center;
+    justify-content: space-evenly;
 
 }
+
 
 p{
     text-align:justify;
