@@ -32,7 +32,7 @@
     </section>
 
     <section class="list">
-      <h2>Résultats de la Recherche</h2>
+      <h2>Ajout dans la base de données</h2>
       <?php
       try {
         $db = new PDO('mysql:host=webinfo.iutmontp.univ-montp2.fr;dbname=reinerk;charset=utf8', 'reinerk', '060078262EG');
