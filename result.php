@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -45,8 +45,12 @@
             <?php
             try {
                 $db = new PDO('mysql:host=webinfo.iutmontp.univ-montp2.fr;dbname=reinerk;charset=utf8', 'reinerk', '060078262EG');
-                $req = $db->prepare('SELECT * FROM SAUVETEURS ORDER BY nomSauveteur');
-                $req->execute();
+                $req = $db->prepare('SELECT * FROM SAUVETEURS WHERE nomSauveteur = :sauveteur OR prenomSauveteur = :sauveteurs');
+                $values = array(
+                  "sauveteur"=> $_POST["sauveteur"],
+                  "sauveteurs"=> $_POST["sauveteur"]
+                );
+                $req->execute($values);
                 $tuples = $req->fetchAll();
             } catch (Exception $e) {
                 die('Erreur :' . $e->getMessage());
